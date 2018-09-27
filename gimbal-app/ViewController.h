@@ -11,7 +11,7 @@
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *latitudeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *longitudeLabel;
-
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 
 
 @end
