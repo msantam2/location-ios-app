@@ -111,8 +111,10 @@
 				1AAF91B3215C64CB007126CF /* Info.plist */,
 				1AAF91B4215C64CB007126CF /* main.m */,
 			);
+			indentWidth = 2;
 			path = "gimbal-app";
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		1AAF91BD215C64CB007126CF /* gimbal-appTests */ = {
 			isa = PBXGroup;
@@ -313,8 +315,10 @@
 			children = (
 				1AAF91B1215C64CB007126CF /* Base */,
 			);
+			indentWidth = 2;
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 /* End PBXVariantGroup section */
 
