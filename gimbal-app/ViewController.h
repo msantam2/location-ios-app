@@ -15,6 +15,4 @@
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 
 - (IBAction)getCurrentLocation:(id)sender;
-
 @end
-
