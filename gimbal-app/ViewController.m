@@ -28,6 +28,18 @@ CLLocationManager *locationManager;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     
     [locationManager startUpdatingLocation];
+
+    UIAlertController *startAlert = [UIAlertController alertControllerWithTitle:@"Tracking Your Location..."
+                                                                        message:@"We will now alert you when you have reached the ROW DTLA. Stay tuned!"
+                                                                 preferredStyle:UIAlertControllerStyleAlert];
+  
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"Got It"
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {}];
+  
+    [startAlert addAction:defaultAction];
+  
+    [self presentViewController:startAlert animated:YES completion:nil];
 }
 
 
@@ -38,11 +50,13 @@ CLLocationManager *locationManager;
     NSLog(@"didFailWithError: %@", error);
 
     UIAlertController *errorAlert = [UIAlertController alertControllerWithTitle:@"Error"
-                                        message:@"Failed to Get Your Location"
-                                        preferredStyle:UIAlertControllerStyleAlert];
+                                                                        message:@"Failed to Get Your Location"
+                                                                 preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {}];
-    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK"
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {}];
+
     [errorAlert addAction:defaultAction];
 
     [self presentViewController:errorAlert animated:YES completion:nil];
