@@ -23,4 +23,6 @@ CLLocationManager *locationManager;
 }
 
 
+- (IBAction)getCurrentLocation:(id)sender {
+}
 @end
