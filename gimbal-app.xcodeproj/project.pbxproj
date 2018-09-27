@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1AAF91A7215C64C9007126CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAF91A6215C64C9007126CF /* AppDelegate.m */; };
+		1AAF91AA215C64C9007126CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAF91A9215C64C9007126CF /* ViewController.m */; };
+		1AAF91AD215C64C9007126CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AAF91AB215C64C9007126CF /* Main.storyboard */; };
+		1AAF91AF215C64CB007126CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AAF91AE215C64CB007126CF /* Assets.xcassets */; };
+		1AAF91B2215C64CB007126CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AAF91B0215C64CB007126CF /* LaunchScreen.storyboard */; };
+		1AAF91B5215C64CB007126CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAF91B4215C64CB007126CF /* main.m */; };
+		1AAF91BF215C64CB007126CF /* gimbal_appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAF91BE215C64CB007126CF /* gimbal_appTests.m */; };
+		1AAF91CA215C64CB007126CF /* gimbal_appUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAF91C9215C64CB007126CF /* gimbal_appUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1AAF91BB215C64CB007126CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AAF919A215C64C9007126CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AAF91A1215C64C9007126CF;
+			remoteInfo = "gimbal-app";
+		};
+		1AAF91C6215C64CB007126CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AAF919A215C64C9007126CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1AAF91A1215C64C9007126CF;
+			remoteInfo = "gimbal-app";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1AAF91A2215C64C9007126CF /* gimbal-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gimbal-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AAF91A5215C64C9007126CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1AAF91A6215C64C9007126CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1AAF91A8215C64C9007126CF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1AAF91A9215C64C9007126CF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1AAF91AC215C64C9007126CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1AAF91AE215C64CB007126CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1AAF91B1215C64CB007126CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1AAF91B3215C64CB007126CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AAF91B4215C64CB007126CF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1AAF91BA215C64CB007126CF /* gimbal-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "gimbal-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AAF91BE215C64CB007126CF /* gimbal_appTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gimbal_appTests.m; sourceTree = "<group>"; };
+		1AAF91C0215C64CB007126CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AAF91C5215C64CB007126CF /* gimbal-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "gimbal-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AAF91C9215C64CB007126CF /* gimbal_appUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gimbal_appUITests.m; sourceTree = "<group>"; };
+		1AAF91CB215C64CB007126CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1AAF919F215C64C9007126CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AAF91B7215C64CB007126CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AAF91C2215C64CB007126CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1AAF9199215C64C9007126CF = {
+			isa = PBXGroup;
+			children = (
+				1AAF91A4215C64C9007126CF /* gimbal-app */,
+				1AAF91BD215C64CB007126CF /* gimbal-appTests */,
+				1AAF91C8215C64CB007126CF /* gimbal-appUITests */,
+				1AAF91A3215C64C9007126CF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1AAF91A3215C64C9007126CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1AAF91A2215C64C9007126CF /* gimbal-app.app */,
+				1AAF91BA215C64CB007126CF /* gimbal-appTests.xctest */,
+				1AAF91C5215C64CB007126CF /* gimbal-appUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1AAF91A4215C64C9007126CF /* gimbal-app */ = {
+			isa = PBXGroup;
+			children = (
+				1AAF91A5215C64C9007126CF /* AppDelegate.h */,
+				1AAF91A6215C64C9007126CF /* AppDelegate.m */,
+				1AAF91A8215C64C9007126CF /* ViewController.h */,
+				1AAF91A9215C64C9007126CF /* ViewController.m */,
+				1AAF91AB215C64C9007126CF /* Main.storyboard */,
+				1AAF91AE215C64CB007126CF /* Assets.xcassets */,
+				1AAF91B0215C64CB007126CF /* LaunchScreen.storyboard */,
+				1AAF91B3215C64CB007126CF /* Info.plist */,
+				1AAF91B4215C64CB007126CF /* main.m */,
+			);
+			path = "gimbal-app";
+			sourceTree = "<group>";
+		};
+		1AAF91BD215C64CB007126CF /* gimbal-appTests */ = {
+			isa = PBXGroup;
+			children = (
+				1AAF91BE215C64CB007126CF /* gimbal_appTests.m */,
+				1AAF91C0215C64CB007126CF /* Info.plist */,
+			);
+			path = "gimbal-appTests";
+			sourceTree = "<group>";
+		};
+		1AAF91C8215C64CB007126CF /* gimbal-appUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1AAF91C9215C64CB007126CF /* gimbal_appUITests.m */,
+				1AAF91CB215C64CB007126CF /* Info.plist */,
+			);
+			path = "gimbal-appUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1AAF91A1215C64C9007126CF /* gimbal-app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AAF91CE215C64CB007126CF /* Build configuration list for PBXNativeTarget "gimbal-app" */;
+			buildPhases = (
+				1AAF919E215C64C9007126CF /* Sources */,
+				1AAF919F215C64C9007126CF /* Frameworks */,
+				1AAF91A0215C64C9007126CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "gimbal-app";
+			productName = "gimbal-app";
+			productReference = 1AAF91A2215C64C9007126CF /* gimbal-app.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1AAF91B9215C64CB007126CF /* gimbal-appTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AAF91D1215C64CB007126CF /* Build configuration list for PBXNativeTarget "gimbal-appTests" */;
+			buildPhases = (
+				1AAF91B6215C64CB007126CF /* Sources */,
+				1AAF91B7215C64CB007126CF /* Frameworks */,
+				1AAF91B8215C64CB007126CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1AAF91BC215C64CB007126CF /* PBXTargetDependency */,
+			);
+			name = "gimbal-appTests";
+			productName = "gimbal-appTests";
+			productReference = 1AAF91BA215C64CB007126CF /* gimbal-appTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1AAF91C4215C64CB007126CF /* gimbal-appUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AAF91D4215C64CB007126CF /* Build configuration list for PBXNativeTarget "gimbal-appUITests" */;
+			buildPhases = (
+				1AAF91C1215C64CB007126CF /* Sources */,
+				1AAF91C2215C64CB007126CF /* Frameworks */,
+				1AAF91C3215C64CB007126CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1AAF91C7215C64CB007126CF /* PBXTargetDependency */,
+			);
+			name = "gimbal-appUITests";
+			productName = "gimbal-appUITests";
+			productReference = 1AAF91C5215C64CB007126CF /* gimbal-appUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1AAF919A215C64C9007126CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Matthew Santamaria";
+				TargetAttributes = {
+					1AAF91A1215C64C9007126CF = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					1AAF91B9215C64CB007126CF = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 1AAF91A1215C64C9007126CF;
+					};
+					1AAF91C4215C64CB007126CF = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 1AAF91A1215C64C9007126CF;
+					};
+				};
+			};
+			buildConfigurationList = 1AAF919D215C64C9007126CF /* Build configuration list for PBXProject "gimbal-app" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1AAF9199215C64C9007126CF;
+			productRefGroup = 1AAF91A3215C64C9007126CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1AAF91A1215C64C9007126CF /* gimbal-app */,
+				1AAF91B9215C64CB007126CF /* gimbal-appTests */,
+				1AAF91C4215C64CB007126CF /* gimbal-appUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1AAF91A0215C64C9007126CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AAF91B2215C64CB007126CF /* LaunchScreen.storyboard in Resources */,
+				1AAF91AF215C64CB007126CF /* Assets.xcassets in Resources */,
+				1AAF91AD215C64C9007126CF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AAF91B8215C64CB007126CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AAF91C3215C64CB007126CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1AAF919E215C64C9007126CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AAF91AA215C64C9007126CF /* ViewController.m in Sources */,
+				1AAF91B5215C64CB007126CF /* main.m in Sources */,
+				1AAF91A7215C64C9007126CF /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AAF91B6215C64CB007126CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AAF91BF215C64CB007126CF /* gimbal_appTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AAF91C1215C64CB007126CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AAF91CA215C64CB007126CF /* gimbal_appUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1AAF91BC215C64CB007126CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1AAF91A1215C64C9007126CF /* gimbal-app */;
+			targetProxy = 1AAF91BB215C64CB007126CF /* PBXContainerItemProxy */;
+		};
+		1AAF91C7215C64CB007126CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1AAF91A1215C64C9007126CF /* gimbal-app */;
+			targetProxy = 1AAF91C6215C64CB007126CF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1AAF91AB215C64C9007126CF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AAF91AC215C64C9007126CF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1AAF91B0215C64CB007126CF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AAF91B1215C64CB007126CF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1AAF91CC215C64CB007126CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1AAF91CD215C64CB007126CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1AAF91CF215C64CB007126CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "gimbal-app/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "santamaria.gimbal-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1AAF91D0215C64CB007126CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "gimbal-app/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "santamaria.gimbal-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1AAF91D2215C64CB007126CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "gimbal-appTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "santamaria.gimbal-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gimbal-app.app/gimbal-app";
+			};
+			name = Debug;
+		};
+		1AAF91D3215C64CB007126CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "gimbal-appTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "santamaria.gimbal-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gimbal-app.app/gimbal-app";
+			};
+			name = Release;
+		};
+		1AAF91D5215C64CB007126CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "gimbal-appUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "santamaria.gimbal-appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "gimbal-app";
+			};
+			name = Debug;
+		};
+		1AAF91D6215C64CB007126CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "gimbal-appUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "santamaria.gimbal-appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "gimbal-app";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1AAF919D215C64C9007126CF /* Build configuration list for PBXProject "gimbal-app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AAF91CC215C64CB007126CF /* Debug */,
+				1AAF91CD215C64CB007126CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AAF91CE215C64CB007126CF /* Build configuration list for PBXNativeTarget "gimbal-app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AAF91CF215C64CB007126CF /* Debug */,
+				1AAF91D0215C64CB007126CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AAF91D1215C64CB007126CF /* Build configuration list for PBXNativeTarget "gimbal-appTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AAF91D2215C64CB007126CF /* Debug */,
+				1AAF91D3215C64CB007126CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AAF91D4215C64CB007126CF /* Build configuration list for PBXNativeTarget "gimbal-appUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AAF91D5215C64CB007126CF /* Debug */,
+				1AAF91D6215C64CB007126CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1AAF919A215C64C9007126CF /* Project object */;
+}
