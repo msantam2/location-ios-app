@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A9C49AE215D59EE005634DB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9C49AD215D59EE005634DB /* CoreLocation.framework */; };
 		1AAF91A7215C64C9007126CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAF91A6215C64C9007126CF /* AppDelegate.m */; };
 		1AAF91AA215C64C9007126CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAF91A9215C64C9007126CF /* ViewController.m */; };
 		1AAF91AD215C64C9007126CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AAF91AB215C64C9007126CF /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A9C49AD215D59EE005634DB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1AAF91A2215C64C9007126CF /* gimbal-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gimbal-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AAF91A5215C64C9007126CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1AAF91A6215C64C9007126CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A9C49AE215D59EE005634DB /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A9C49AC215D59EE005634DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A9C49AD215D59EE005634DB /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1AAF9199215C64C9007126CF = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +96,7 @@
 				1AAF91BD215C64CB007126CF /* gimbal-appTests */,
 				1AAF91C8215C64CB007126CF /* gimbal-appUITests */,
 				1AAF91A3215C64C9007126CF /* Products */,
+				1A9C49AC215D59EE005634DB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

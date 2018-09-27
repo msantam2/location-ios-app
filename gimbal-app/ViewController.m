@@ -13,10 +13,13 @@
 @end
 
 @implementation ViewController
+CLLocationManager *locationManager;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+
+    locationManager = [[CLLocationManager alloc] init];
 }
 
 
