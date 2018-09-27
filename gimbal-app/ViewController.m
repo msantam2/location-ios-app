@@ -22,26 +22,16 @@ CLLocationManager *locationManager;
     locationManager = [[CLLocationManager alloc] init];
 }
 
-
 - (IBAction)getCurrentLocation:(id)sender {
     locationManager.delegate = self;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     
     [locationManager startUpdatingLocation];
 
-    UIAlertController *startAlert = [UIAlertController alertControllerWithTitle:@"Tracking Your Location..."
-                                                                        message:@"We will now alert you when you have reached the ROW DTLA. Stay tuned!"
-                                                                 preferredStyle:UIAlertControllerStyleAlert];
-  
-    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"Got It"
-                                                            style:UIAlertActionStyleDefault
-                                                          handler:^(UIAlertAction * action) {}];
-  
-    [startAlert addAction:defaultAction];
-  
-    [self presentViewController:startAlert animated:YES completion:nil];
+    [self showAlert:@"Tracking Your Location..."
+            message:@"We will now alert you when you have reached the ROW DTLA. Stay tuned!"
+         actionText:@"Got It"];
 }
-
 
 #pragma mark - CLLocationManagerDelegate
 
@@ -49,17 +39,9 @@ CLLocationManager *locationManager;
 {
     NSLog(@"didFailWithError: %@", error);
 
-    UIAlertController *errorAlert = [UIAlertController alertControllerWithTitle:@"Error"
-                                                                        message:@"Failed to Get Your Location"
-                                                                 preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK"
-                                                            style:UIAlertActionStyleDefault
-                                                          handler:^(UIAlertAction * action) {}];
-
-    [errorAlert addAction:defaultAction];
-
-    [self presentViewController:errorAlert animated:YES completion:nil];
+    [self showAlert:@"Error"
+            message:@"Failed to get your location. Please try again soon."
+         actionText:@"OK"];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
@@ -73,5 +55,19 @@ CLLocationManager *locationManager;
 //        _longitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
 //        _latitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
 //    }
+}
+
+- (void)showAlert:(NSString *)title message:(NSString *)message actionText:(NSString *)actionText {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title
+                                                                   message:message
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:actionText
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {}];
+
+    [alert addAction:defaultAction];
+
+    [self presentViewController:alert animated:YES completion:nil];
 }
 @end
