@@ -51,8 +51,8 @@ CLPlacemark *placemark;
 {
 //    1.  Get most recent location (lastObject) - CHECK
 //    2.  Update 3 fields: Latitude (check), Longitude (check), Address (check)
-//    2.5 Fix bug where address pushes shit down
-//    3.  Perform check: if this latitude & longitude is (within) correct coordinates,
+//    2.5 Fix bug where address pushes shit down (check)
+//    3.  Perform check: if this latitude & longitude is (within) correct coordinates, & SECOND FLOOR!
 //        call showAlert to tell the user that "You have reached the ROW DTLA! Congratulations!"
 //    4.  Done.
 
@@ -62,6 +62,11 @@ CLPlacemark *placemark;
         [self updateCoordinates:(CLLocation *)currentLocation];
         [self updateAddress:(CLLocation *)currentLocation];
     }
+  
+    // store in config (env)
+    // (120ft * 125ft) => (36.576m * 38.1m) => 26.41m meters if half the diagonal
+    // lat: 34.033402
+    // long: -118.240309
 }
 
 - (void)updateCoordinates:(CLLocation *)location {
