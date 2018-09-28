@@ -65,6 +65,7 @@ double farthestDistanceFromCenterWithinBoundary;
             [self showAlert:@"Success!"
                     message:@"You have reached the ROW DTLA!"
                  actionText:@"Sweet"];
+
             //    Un-comment below to stop sending location updates, saving battery power. I am keeping commented for sake of demo.
             //    [locationManager stopUpdatingLocation];
         }
@@ -98,7 +99,7 @@ double farthestDistanceFromCenterWithinBoundary;
 }
 
 - (BOOL)didReachDestination:(CLLocation *)location {
-    return [self isWithinBoundary:(CLLocation *)location]; // && [self onCorrectFloor:(CLLocation *)location];
+    return [self isWithinBoundary:(CLLocation *)location]; // && [self onCorrectFloor:(CLLocation *)location]; Commenting for demo, in real-world where we have altitude data, we would use this to see if we are on correct floor of building
 }
 
 - (BOOL)isWithinBoundary:(CLLocation *)location {
@@ -108,7 +109,7 @@ double farthestDistanceFromCenterWithinBoundary;
 
 - (BOOL)onCorrectFloor:(CLLocation *)location {
     double destinationFloor = [self convertStrToDouble:(NSString *)[[[NSProcessInfo processInfo] environment] objectForKey:@"BUILDING_FLOOR"]];
-  
+
     return location.floor.level == destinationFloor;
 }
 
