@@ -17,7 +17,6 @@ CLLocationManager *locationManager;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 
     locationManager = [[CLLocationManager alloc] init];
 }
@@ -25,7 +24,8 @@ CLLocationManager *locationManager;
 - (IBAction)getCurrentLocation:(id)sender {
     locationManager.delegate = self;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    
+
+    [locationManager requestWhenInUseAuthorization];
     [locationManager startUpdatingLocation];
 
     [self showAlert:@"Tracking Your Location..."
@@ -44,18 +44,26 @@ CLLocationManager *locationManager;
          actionText:@"OK"];
 }
 
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations
 {
-//    [locations lastObject]
-//
-//    NSLog(@"didUpdateToLocation: %@", newLocation);
-//    CLLocation *currentLocation = newLocation;
-//
+  // 1. Get most recent location (lastObject)
+  // 2. Update 3 fields: Latitude, Longitude, Address
+  // 3. Perform check: if this latitude & longitude is (within) correct coordinates,
+  //    call showAlert to tell the user that "You have reached the ROW DTLA! Congratulations!"
+  // 4. Done.
+  
+//    CLLocation *currentLocation = [locations lastObject];
+//    NSLog(@"didUpdateLocations: %@", currentLocation);
+
+    NSLog(@"We are in didUpdateLocations");
+
 //    if (currentLocation != nil) {
 //        _longitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
 //        _latitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
 //    }
 }
+
+#pragma mark - Utility methods
 
 - (void)showAlert:(NSString *)title message:(NSString *)message actionText:(NSString *)actionText {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:title
