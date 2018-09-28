@@ -65,8 +65,8 @@ double farthestDistanceFromCenterWithinBoundary;
             [self showAlert:@"Success!"
                     message:@"You have reached the ROW DTLA!"
                  actionText:@"Sweet"];
-
-            [locationManager stopUpdatingLocation];
+            //    Un-comment below to stop sending location updates, saving battery power. I am keeping commented for sake of demo.
+            //    [locationManager stopUpdatingLocation];
         }
     }
 }
