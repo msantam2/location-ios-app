@@ -49,37 +49,40 @@ CLPlacemark *placemark;
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations
 {
-//    1. Get most recent location (lastObject) - CHECK
-//    2. Update 3 fields: Latitude (check), Longitude (check), Address
-//    3. Perform check: if this latitude & longitude is (within) correct coordinates,
+//    1.  Get most recent location (lastObject) - CHECK
+//    2.  Update 3 fields: Latitude (check), Longitude (check), Address (check)
+//    2.5 Fix bug where address pushes shit down
+//    3.  Perform check: if this latitude & longitude is (within) correct coordinates,
 //        call showAlert to tell the user that "You have reached the ROW DTLA! Congratulations!"
-//    4. Done.
+//    4.  Done.
 
     CLLocation *currentLocation = [locations lastObject];
 
     if (currentLocation != nil) {
-      
         [self updateCoordinates:(CLLocation *)currentLocation];
-
-        [geocoder reverseGeocodeLocation:currentLocation
-                       completionHandler:^(NSArray *placemarks, NSError *error) {
-          if (error == nil && [placemarks count] > 0) {
-            placemark = [placemarks lastObject];
-            self->_addressLabel.text = [NSString stringWithFormat:@"%@ %@\n%@ %@\n%@\n%@",
-                                         placemark.subThoroughfare, placemark.thoroughfare,
-                                         placemark.postalCode, placemark.locality,
-                                         placemark.administrativeArea,
-                                         placemark.country];
-          } else {
-            NSLog(@"%@", error.debugDescription);
-          }
-        }];
+        [self updateAddress:(CLLocation *)currentLocation];
     }
 }
 
 - (void)updateCoordinates:(CLLocation *)location {
     _latitudeLabel.text = [NSString stringWithFormat:@"%.8f", location.coordinate.latitude];
     _longitudeLabel.text = [NSString stringWithFormat:@"%.8f", location.coordinate.longitude];
+}
+
+- (void)updateAddress:(CLLocation *)location {
+    [geocoder reverseGeocodeLocation:location
+                   completionHandler:^(NSArray *placemarks, NSError *error) {
+                        if (error == nil && [placemarks count] > 0) {
+                            placemark = [placemarks lastObject];
+                            self->_addressLabel.text = [NSString stringWithFormat:@"%@ %@\n%@, %@ %@\n%@",
+                                                         placemark.subThoroughfare, placemark.thoroughfare,
+                                                         placemark.locality, placemark.administrativeArea,
+                                                         placemark.postalCode,
+                                                         placemark.country];
+                        } else {
+                            NSLog(@"Geocode Error: %@", error.debugDescription);
+                        }
+                   }];
 }
 
 #pragma mark - Utility methods
