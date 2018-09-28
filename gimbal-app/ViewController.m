@@ -46,21 +46,19 @@ CLLocationManager *locationManager;
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations
 {
-  // 1. Get most recent location (lastObject)
-  // 2. Update 3 fields: Latitude, Longitude, Address
-  // 3. Perform check: if this latitude & longitude is (within) correct coordinates,
-  //    call showAlert to tell the user that "You have reached the ROW DTLA! Congratulations!"
-  // 4. Done.
-  
-//    CLLocation *currentLocation = [locations lastObject];
-//    NSLog(@"didUpdateLocations: %@", currentLocation);
+//    1. Get most recent location (lastObject)
+//    2. Update 3 fields: Latitude, Longitude, Address
+//    3. Perform check: if this latitude & longitude is (within) correct coordinates,
+//        call showAlert to tell the user that "You have reached the ROW DTLA! Congratulations!"
+//    4. Done.
 
-    NSLog(@"We are in didUpdateLocations");
+    CLLocation *currentLocation = [locations lastObject];
+    NSLog(@"didUpdateLocations: %@", currentLocation);
 
-//    if (currentLocation != nil) {
-//        _longitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
-//        _latitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
-//    }
+    if (currentLocation != nil) {
+        _latitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
+        _longitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
+    }
 }
 
 #pragma mark - Utility methods
