@@ -56,17 +56,28 @@ CLPlacemark *placemark;
 //        call showAlert to tell the user that "You have reached the ROW DTLA! Congratulations!"
 //    4.  Done.
 
+//    store in config (env)
+//    (120ft * 125ft) => (36.576m * 38.1m) => 26.41m meters if half the diagonal
+//    lat: 34.033402
+//    long: -118.240309
+
     CLLocation *currentLocation = [locations lastObject];
 
     if (currentLocation != nil) {
         [self updateCoordinates:(CLLocation *)currentLocation];
         [self updateAddress:(CLLocation *)currentLocation];
     }
+
+    NSString *center_lat = [[[NSProcessInfo processInfo] environment] objectForKey:@"CENTER_COORD_LAT"];
+    NSString *center_long = [[[NSProcessInfo processInfo] environment] objectForKey:@"CENTER_COORD_LONG"];
+    NSString *width = [[[NSProcessInfo processInfo] environment] objectForKey:@"BUILDING_2D_WIDTH_FEET"];
+    NSString *height = [[[NSProcessInfo processInfo] environment] objectForKey:@"BUILDING_2D_HEIGHT_FEET"];
+
+    NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
+    f.numberStyle = NSNumberFormatterDecimalStyle;
+    NSNumber *myNumber = [f numberFromString:@"42"];
   
-    // store in config (env)
-    // (120ft * 125ft) => (36.576m * 38.1m) => 26.41m meters if half the diagonal
-    // lat: 34.033402
-    // long: -118.240309
+    NSLog(@"%@, %@, %@, %@", center_lat, center_long, width, height);
 }
 
 - (void)updateCoordinates:(CLLocation *)location {
