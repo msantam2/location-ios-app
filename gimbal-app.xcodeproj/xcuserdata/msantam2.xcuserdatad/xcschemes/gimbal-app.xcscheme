@@ -88,6 +88,11 @@
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
+            key = "BUILDING_FLOOR"
+            value = "2"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
             key = "BUILDING_2D_HEIGHT_FEET"
             value = "125"
             isEnabled = "YES">

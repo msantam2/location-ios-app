@@ -54,31 +54,26 @@ double farthestDistanceFromCenterWithinBoundary;
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations
 {
-//    1.  Get most recent location (lastObject) - CHECK
-//    2.  Update 3 fields: Latitude (check), Longitude (check), Address (check)
-//    2.5 Fix bug where address pushes shit down (check)
-//    3.  Perform check: if this latitude & longitude is (within) correct coordinates, & SECOND FLOOR!
-//        call showAlert to tell the user that "You have reached the ROW DTLA! Congratulations!"
-//    4.  Done.
-
     CLLocation *currentLocation = [locations lastObject];
 
     if (currentLocation != nil) {
         [self updateCoordinates:(CLLocation *)currentLocation];
         [self updateAddress:(CLLocation *)currentLocation];
 
-//        BOOL *destinationReached = [self didReachDestination:(CLLocation *)currentLocation];
-//        if (destinationReached && onCorrectFloor) {
-//            [self showAlert:@"Success!"
-//                    message:@"You have reached the ROW DTLA!"
-//                 actionText:@"Sweet"];
-//        }
+        BOOL destinationReached = [self didReachDestination:(CLLocation *)currentLocation];
+        if (destinationReached) {
+            [self showAlert:@"Success!"
+                    message:@"You have reached the ROW DTLA!"
+                 actionText:@"Sweet"];
+
+            [locationManager stopUpdatingLocation];
+        }
     }
 }
 
 - (void)setupDestinationDetails {
-  [self setupCenter];
-  [self setupBoundary];
+    [self setupCenter];
+    [self setupBoundary];
 }
 
 - (void)updateCoordinates:(CLLocation *)location {
@@ -102,19 +97,26 @@ double farthestDistanceFromCenterWithinBoundary;
                    }];
 }
 
-//- (BOOL)didReachDestination:(CLLocation *)location {
-//    return YES;
-//}
+- (BOOL)didReachDestination:(CLLocation *)location {
+    return [self isWithinBoundary:(CLLocation *)location]; // && [self onCorrectFloor:(CLLocation *)location];
+}
+
+- (BOOL)isWithinBoundary:(CLLocation *)location {
+    CLLocationDistance distance = [location distanceFromLocation:(const CLLocation *)center];
+    return distance <= farthestDistanceFromCenterWithinBoundary;
+}
+
+- (BOOL)onCorrectFloor:(CLLocation *)location {
+    double destinationFloor = [self convertStrToDouble:(NSString *)[[[NSProcessInfo processInfo] environment] objectForKey:@"BUILDING_FLOOR"]];
+  
+    return location.floor.level == destinationFloor;
+}
 
 - (void)setupCenter {
     double centerLat = [self convertStrToDouble:(NSString *)[[[NSProcessInfo processInfo] environment] objectForKey:@"CENTER_COORD_LAT"]];
     double centerLong = [self convertStrToDouble:(NSString *)[[[NSProcessInfo processInfo] environment] objectForKey:@"CENTER_COORD_LONG"]];
-  
-    [self createCenterLocationWithLatitude:(double)centerLat longitude:(double)centerLong];
-}
 
-- (void)createCenterLocationWithLatitude:(double)latitude longitude:(double)longitude {
-    center = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
+    center = [[CLLocation alloc] initWithLatitude:centerLat longitude:centerLong];
 }
 
 - (void)setupBoundary {
@@ -154,6 +156,6 @@ double farthestDistanceFromCenterWithinBoundary;
 }
 
 - (double)findPythagoreanHypotenuse:(double)legA legB:(double)legB {
-  return sqrt(pow(legA, 2) + pow(legB, 2));
+    return sqrt(pow(legA, 2) + pow(legB, 2));
 }
 @end
