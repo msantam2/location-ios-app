@@ -14,11 +14,14 @@
 
 @implementation ViewController
 CLLocationManager *locationManager;
+CLGeocoder *geocoder;
+CLPlacemark *placemark;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     locationManager = [[CLLocationManager alloc] init];
+    geocoder = [[CLGeocoder alloc] init];
 }
 
 - (IBAction)getCurrentLocation:(id)sender {
@@ -46,19 +49,37 @@ CLLocationManager *locationManager;
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations
 {
-//    1. Get most recent location (lastObject)
-//    2. Update 3 fields: Latitude, Longitude, Address
+//    1. Get most recent location (lastObject) - CHECK
+//    2. Update 3 fields: Latitude (check), Longitude (check), Address
 //    3. Perform check: if this latitude & longitude is (within) correct coordinates,
 //        call showAlert to tell the user that "You have reached the ROW DTLA! Congratulations!"
 //    4. Done.
 
     CLLocation *currentLocation = [locations lastObject];
-    NSLog(@"didUpdateLocations: %@", currentLocation);
 
     if (currentLocation != nil) {
-        _latitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
-        _longitudeLabel.text = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
+      
+        [self updateCoordinates:(CLLocation *)currentLocation];
+
+        [geocoder reverseGeocodeLocation:currentLocation
+                       completionHandler:^(NSArray *placemarks, NSError *error) {
+          if (error == nil && [placemarks count] > 0) {
+            placemark = [placemarks lastObject];
+            self->_addressLabel.text = [NSString stringWithFormat:@"%@ %@\n%@ %@\n%@\n%@",
+                                         placemark.subThoroughfare, placemark.thoroughfare,
+                                         placemark.postalCode, placemark.locality,
+                                         placemark.administrativeArea,
+                                         placemark.country];
+          } else {
+            NSLog(@"%@", error.debugDescription);
+          }
+        }];
     }
+}
+
+- (void)updateCoordinates:(CLLocation *)location {
+    _latitudeLabel.text = [NSString stringWithFormat:@"%.8f", location.coordinate.latitude];
+    _longitudeLabel.text = [NSString stringWithFormat:@"%.8f", location.coordinate.longitude];
 }
 
 #pragma mark - Utility methods
